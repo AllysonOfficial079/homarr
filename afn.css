@@ -1,0 +1,72 @@
+/* --- Global Background & Transparency --- */
+:root {
+  --homarr-bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  --homarr-glass-bg: rgba(255, 255, 255, 0.05);
+  --homarr-glass-border: rgba(255, 255, 255, 0.1);
+  --homarr-accent-gradient: linear-gradient(90deg, #ff79c6, #bd93f9, #8be9fd);
+}
+
+/* Apply deep space background */
+body {
+  background: var(--homarr-bg-gradient) !important;
+  background-attachment: fixed !important;
+}
+
+/* --- Minimalist Glass Tiles --- */
+.mantine-Paper-root, .mantine-Card-root {
+  background-color: var(--homarr-glass-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--homarr-glass-border) !important;
+  border-radius: 16px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+/* Tile Hover Effect - Gradient Border Glow */
+.mantine-Paper-root:hover, .mantine-Card-root:hover {
+  transform: translateY(-5px);
+  border-color: #bd93f9 !important; /* Purple highlight */
+  box-shadow: 0 0 15px rgba(189, 147, 249, 0.3) !important;
+}
+
+/* --- Header & Navigation --- */
+header.mantine-Header-root {
+  background: rgba(15, 52, 96, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--homarr-glass-border) !important;
+}
+
+/* Text & Icon Accents */
+.mantine-Text-root, .mantine-Title-root {
+  color: #f8f8f2 !important;
+}
+
+/* Highlight active items/icons with Pink/Purple gradient */
+.mantine-ActionIcon-root {
+  color: #ff79c6 !important;
+}
+
+/* --- Gradient Accents for Specific Tiles --- */
+/* Add a top-border gradient to all apps */
+.mantine-Card-root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--homarr-accent-gradient);
+  border-radius: 16px 16px 0 0;
+}
+
+/* Smooth out the scrollbar to match minimalism */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: #bd93f9;
+  border-radius: 10px;
+}
