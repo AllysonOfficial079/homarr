@@ -1,5 +1,7 @@
 #---------------------------------------------------------------------#
 #     Homarr - A simple, yet powerful dashboard for your server.      #
+#  You can use this in your "Stacks" of Portainer, create a custom    #
+#  stack and copy this YAML code and deploy into your own Docker      # 
 #---------------------------------------------------------------------#
 services:
   homarr:
