@@ -9,6 +9,9 @@ A minimalist, highly curated personal homelab dashboard powered by **Homarr**. T
 * **Custom Integration**: Integrated status widgets for Docker containers, Pi-hole, and Plex.
 * **Ping Monitoring**: Built-in visual indicators for service uptime and response latency.
 
+## Screenshots:
+<img src="images/Screenshot_20260527_224442.png" alt="App Screenshot" width="600">
+
 ## 📁 Repository Structure
 
 ```text
